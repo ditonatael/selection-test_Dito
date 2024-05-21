@@ -1,9 +1,21 @@
 "use client";
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 
 export default function Home() {
   const [character, setCharacter] = useState({});
   const [sortedCharacter, setSortedCharacter] = useState([]);
+
+  // const fetch = async () => {
+  //   try {
+  //     const res = await axios.get(
+  //       "https://www.random.org/strings/?num=10&len=32&upperalpha=on&unique=off&format=plain"
+  //     );
+  //      setCharacter(res.data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   const source =
     "AASDFGRTYHHGFDKAVKTREQJSDNJNJFNUIWQOINEWKLNNSADJKNFIUEQRBJBKBSAKJBFIUHROWQIJKENJKFNEKJDFNEWORIJIOERKNDFJBIJERKBADQLMKMAD";
@@ -24,6 +36,7 @@ export default function Home() {
   };
 
   useEffect(() => {
+    // fetch();
     sum();
   }, []);
 
